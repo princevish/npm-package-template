@@ -1,11 +1,11 @@
-/dist
+/src
 /node_modules
 
 .env
 .DS_Store
 
 tsconfig.json
-tsup.config.js
+tsup.config.ts
 
 /.changeset
 /.github
