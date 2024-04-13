@@ -10,3 +10,4 @@ tsup.config.ts
 /.changeset
 /.github
 /bin
+/.husky
