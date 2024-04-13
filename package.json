@@ -18,10 +18,9 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "tsc",
-    "build": "lint && tsup",
+    "build": "tsup",
     "version": "changeset",
-    "publish-manual": "npm publish --access public",
-    "publish": "lint && build && version && npm publish --access public"
+    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
