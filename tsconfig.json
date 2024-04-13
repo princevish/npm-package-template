@@ -10,7 +10,10 @@
         "declaration": true,
         "isolatedModules": true,
         "noEmit": true,
-        "outDir": "dist"
+        "outDir": "dist",
+        "noUncheckedIndexedAccess": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true
     },
     "include": [
         "src"

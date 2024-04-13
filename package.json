@@ -16,10 +16,14 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "lint": "tsc",
     "build": "tsup",
-    "publish": "build && npm publish --access public"
+    "version": "changeset",
+    "publish": "npm publish --access public",
+    "publish-manual": "lint && build && version && npm publish --access public"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   }
