@@ -9,3 +9,4 @@ tsup.config.js
 
 /.changeset
 /.github
+/bin

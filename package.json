@@ -1,7 +1,7 @@
 {
-  "name": "npm-package-template",
+  "name": "@vish/npm-package-template",
   "version": "0.0.0",
-  "author": "Prince Vishwakarma <<princevworld@gmail.com>>",
+  "author": "Prince Vishwakarma <princevworld@gmail.com>",
   "description": "npm package template",
   "license": "MIT",
   "repository": {
@@ -12,20 +12,27 @@
     "package",
     "template"
   ],
+  "bin": "./bin/cli.js",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "tsc",
-    "build": "tsup",
+    "build": "lint && tsup",
     "version": "changeset",
-    "publish": "npm publish --access public",
-    "publish-manual": "lint && build && version && npm publish --access public"
+    "publish-manual": "npm publish --access public",
+    "publish": "lint && build && version && npm publish --access public"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@types/node": "^20.12.7",
+    "husky": "^9.0.11",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
