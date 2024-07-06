@@ -24,16 +24,10 @@ jobs:
           token: ${{ env.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - run: npm ci
+      - name: install
+        run: npm ci
 
-      - name: 📣 Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          title: "chore(release): version packages 🦋"
-          publish: npm version:publish
-          version: pnpm version:commit
-          commit: "chore(release): version packages 🦋 [skip ci]"
+      - name: publish
+        run: npm publish --access public
         env:
-          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ env.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
