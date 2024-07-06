@@ -1,6 +1,6 @@
 {
   "name": "@princevish/npm-package-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Prince Vishwakarma <princevworld@gmail.com>",
   "description": "This NPM Package Template provides a comprehensive starting point for developing and publishing your own NPM packages. It includes a basic setup with essential configurations to help streamline the development process, ensuring your package is ready for the NPM registry with ease and efficiency.",
   "license": "MIT",
@@ -21,8 +21,9 @@
     "build": "tsup",
     "version:add": "changeset add",
     "version:commit": "changeset version",
+    "version:publish": "changeset publish",
     "publish": "npm publish --access public",
-    "release": "npm run lint && npm run build && npm run version:add && npm run version:commit && npm run publish"
+    "release": "npm run lint && npm run build && npm run version:add && npm run version:commit && npm run version:publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
