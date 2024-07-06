@@ -57,10 +57,12 @@ if (!deleteFolder(binFolder)) {
   process.exit(-1);
 }
 console.log(
-  "Congratulations! You are ready to start. Follow the following commands to start \n"
+  " \n Congratulations! You are ready to start. Follow the following commands to start \n"
 );
 
 console.log(`cd ${repoName} \n`);
 console.log("npm run build \n");
 console.log("npm run version \n");
 console.log("npm run publish \n");
+
+console.log(`Happy Coding! 🚀 \n`);

@@ -26,8 +26,17 @@ To use this template for your project, follow these steps:
    cd your-package-name
    ```
 
-2. ** Publishing to NPM **
-   - After you have completed developing your package, you can publish it to NPM. Make sure you have an NPM account and are logged in to your NPM CLI.
+2. ** Building the Package **
+   - After you have completed developing your package, you can build it to NPM.
+   ```bash
+      npm run lint
+      npm run build
+      npm run version:add
+      npm run version:commit
+   ```
+
+3. ** Publishing to NPM **
+   - After you have completed building package, you can publish it to NPM. Make sure you have an NPM account and are logged in to your NPM CLI.
    ```bash
       npm login
       npm publish
