@@ -39,7 +39,7 @@ To use this template for your project, follow these steps:
    - After you have completed building package, you can publish it to NPM. Make sure you have an NPM account and are logged in to your NPM CLI.
    ```bash
       npm login
-      npm publish
+      npm run release
    ```
 
 # Contributing
