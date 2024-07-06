@@ -18,7 +18,7 @@ const deleteFolder = (directoryPath) => {
   try {
     fs.rmSync(directoryPath, { recursive: true, force: true });
   } catch (err) {
-    console.error(`Error deleting directory: ${err}`);
+    console.error(`Error deleting directory: ${err} \n`);
     return false;
   }
   return true;
@@ -34,7 +34,7 @@ const gitCheckoutCommand = `git clone --depth 1 ${gitHubRepo} ${repoName}`;
 
 const installCommand = `cd ${repoName} && npm install`;
 
-console.log(`Cloning the repository with name ${repoName}`);
+console.log(`Cloning the repository with name ${repoName} \n`);
 
 const checkedOut = runCommand(gitCheckoutCommand);
 
@@ -43,12 +43,12 @@ if (!checkedOut) {
   process.exit(-1);
 }
 
-console.log(`Installing dependencies for ${repoName}`);
+console.log(`Installing dependencies for ${repoName} \n`);
 
 const installed = runCommand(installCommand);
 
 if (!installed) {
-  console.error("Failed to install dependencies");
+  console.error("Failed to install dependencies \n");
   process.exit(-1);
 }
 
@@ -57,10 +57,10 @@ if (!deleteFolder(binFolder)) {
   process.exit(-1);
 }
 console.log(
-  "Congratulations! You are ready to start. Follow the following commands to start"
+  "Congratulations! You are ready to start. Follow the following commands to start \n"
 );
 
-console.log(`cd ${repoName}`);
-console.log("npm run build");
-console.log("npm run version");
-console.log("npm run publish");
+console.log(`cd ${repoName} \n`);
+console.log("npm run build \n");
+console.log("npm run version \n");
+console.log("npm run publish \n");
