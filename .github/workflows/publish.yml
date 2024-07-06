@@ -13,7 +13,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
 
     steps:
       - uses: actions/checkout@v3
@@ -22,8 +21,11 @@ jobs:
         with:
           node-version: 16.x
           cache: "npm"
+          token: ${{ env.GITHUB_TOKEN }}
+          fetch-depth: 0
+
       - run: npm ci
-      - run: npm run lint && npm run build
+
       - name: 📣 Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
