@@ -5,7 +5,19 @@
   "description": "This NPM Package Template provides a comprehensive starting point for developing and publishing your own NPM packages. It includes a basic setup with essential configurations to help streamline the development process, ensuring your package is ready for the NPM registry with ease and efficiency.",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/princevish/npm-package-template.git"
+    "url": "https://github.com/princevish/npm-package-template.git",
+    "type": "git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/princevish"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/princevish/npm-package-template#readme",
+  "bugs": {
+    "url": "https://github.com/princevish/npm-package-template/issues"
   },
   "keywords": [
     "npm",
