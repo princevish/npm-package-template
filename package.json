@@ -1,11 +1,11 @@
 {
-  "name": "@princevish/google-apis",
+  "name": "@princevish/npm-package-template",
   "version": "0.1.1",
   "author": "Prince Vishwakarma <princevworld@gmail.com>",
   "description": "This NPM Package Template provides a comprehensive starting point for developing and publishing your own NPM packages. It includes a basic setup with essential configurations to help streamline the development process, ensuring your package is ready for the NPM registry with ease and efficiency.",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/princevish/google-apis.git",
+    "url": "https://github.com/princevish/npm-package-template.git",
     "type": "git"
   },
   "funding": {
@@ -15,9 +15,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/princevish/google-apis#readme",
+  "homepage": "https://github.com/princevish/npm-package-template#readme",
   "bugs": {
-    "url": "https://github.com/princevish/google-apis/issues"
+    "url": "https://github.com/princevish/npm-package-template/issues"
   },
   "keywords": [
     "npm",
@@ -48,10 +48,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "dependencies": {
-    "axios": "^1.7.7",
-    "crypto": "^1.0.1",
-    "google-auth-library": "^9.14.2"
   }
 }
